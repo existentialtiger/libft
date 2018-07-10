@@ -19,7 +19,10 @@ SRC_STR = /srcs/string/ft_strcpy.c /srcs/string/ft_strdup.c \
 
 SRC_PTR = /srcs/print/ft_putchar.c /srcs/print/ft_putchar_fd.c \
 			/srcs/print/ft_putendl.c /srcs/print/ft_putendl_fd.c \
+			/srcs/print/ft_putnbr.c /srcs/print/ft_putnbr_fd.c \
 			/srcs/print/ft_putstr.c /srcs/print/ft_putstr_fd.c
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
