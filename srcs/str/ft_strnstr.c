@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/10 11:39:29 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/07/23 18:17:26 by edehmlow         ###   ########.fr       */
+/*   Created: 2018/07/11 17:58:40 by edehmlow          #+#    #+#             */
+/*   Updated: 2018/07/16 00:19:01 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inclds/libft.h"
+#include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	size_t i;
+	size_t j;
+
+	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0' && i < len)
+	{
+		j = 0;
+		while (needle[j] == haystack[i + j] && (i + j < len))
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)&haystack[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }
