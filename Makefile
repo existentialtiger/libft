@@ -6,7 +6,7 @@
 #    By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/12 21:27:38 by edehmlow          #+#    #+#              #
-#    Updated: 2018/07/23 18:40:54 by edehmlow         ###   ########.fr        #
+#    Updated: 2018/08/02 19:57:16 by edehmlow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SRC_STR = ft_strcpy.c ft_strncpy.c ft_strdup.c ft_strlen.c \
 		  ft_strncmp.c ft_strnew.c ft_strclr.c ft_strtrim.c\
 		  ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
 		  ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-		  ft_strndup.c ft_strdel.c ft_strsplit.c
+		  ft_strndup.c ft_strdel.c ft_strsplit.c chk_for_char.c
 
 SRCS = $(SRC_CHAR) $(SRC_STR) $(SRC_PRT) $(SRC_CNVT)
 SRCS += $(SRC_MEM) $(SRC_LST)
