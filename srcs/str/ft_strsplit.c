@@ -6,11 +6,11 @@
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 22:06:54 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/07/17 15:21:15 by edehmlow         ###   ########.fr       */
+/*   Updated: 2018/08/02 22:09:06 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inclds/libft.h"
 
 static int	ft_strwrdcnt(char const *s, char delim)
 {

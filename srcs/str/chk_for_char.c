@@ -6,7 +6,7 @@
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 19:54:18 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/08/02 19:57:24 by edehmlow         ###   ########.fr       */
+/*   Updated: 2018/08/02 22:09:24 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	chk_for_char(char *str, char c)
 {
 	int i;
 
+	i = 0;
 	while (str[i])
 	{
 		if (str[i] == c)

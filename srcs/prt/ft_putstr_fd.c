@@ -6,11 +6,11 @@
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 10:25:28 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/07/17 14:07:21 by edehmlow         ###   ########.fr       */
+/*   Updated: 2018/08/02 22:09:58 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inclds/libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {

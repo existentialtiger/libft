@@ -6,7 +6,7 @@
 #    By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/12 21:27:38 by edehmlow          #+#    #+#              #
-#    Updated: 2018/08/02 19:57:16 by edehmlow         ###   ########.fr        #
+#    Updated: 2018/08/02 22:07:49 by edehmlow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,10 @@ ARCHIVE = ar rc
 
 INDEX = ranlib
 
-OBJ = *.o
-
 SRC_CHAR = ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		   ft_isdigit.c ft_islower.c ft_isprint.c \
 		   ft_isspace.c ft_isupper.c ft_tolower.c \
 		   ft_toupper.c
-
-SRC_CHAR += char/
 
 SRC_CNVT = ft_atoi.c ft_itoa.c
 
@@ -52,15 +48,29 @@ SRC_STR = ft_strcpy.c ft_strncpy.c ft_strdup.c ft_strlen.c \
 		  ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
 		  ft_strndup.c ft_strdel.c ft_strsplit.c chk_for_char.c
 
-SRCS = $(SRC_CHAR) $(SRC_STR) $(SRC_PRT) $(SRC_CNVT)
-SRCS += $(SRC_MEM) $(SRC_LST)
+DIR_CHAR = srcs/char/
+DIR_CNVT = srcs/cnvt/
+DIR_LST = srcs/lst/
+DIR_MEM = srcs/mem/
+DIR_PRT = srcs/prt/
+DIR_STR = srcs/str/
+
+
+SRCS = $(addprefix $(DIR_CHAR), $(SRC_CHAR))
+SRCS += $(addprefix $(DIR_CNVT), $(SRC_CNVT))
+SRCS += $(addprefix $(DIR_LST), $(SRC_LST))
+SRCS += $(addprefix $(DIR_MEM), $(SRC_MEM))
+SRCS += $(addprefix $(DIR_PRT), $(SRC_PRT))
+SRCS += $(addprefix $(DIR_STR), $(SRC_STR))
+
+OBJ = *.o
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(FLAGS) $(SRCS) $(HEADER)
+	$(CC) $(FLAGS) $(SRCS) 
 	$(ARCHIVE) $(NAME) $(OBJ)
 	$(INDEX) $(NAME)
 
